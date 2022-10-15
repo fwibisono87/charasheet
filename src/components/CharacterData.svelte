@@ -5,16 +5,23 @@
 
 <div class="flex flex-col sm:flex-row justify-between gap-4">
     <div class="flex flex-col gap-4 mx-auto">
-        <TextField
+        <div class="hidden xs:block w-fit mx-auto">
+            <TextField
             componentName="Character Name"
-            type="long"
+            type="full"
             bind:componentValue={$userStore.bio.name}
         />
-        <div class="flex flex-row gap-2">
+        </div>
+        <div class="xs:hidden w-full mx-auto">
+            <TextField
+            componentName="Name"
+            bind:componentValue={$userStore.bio.name}
+        />
+        </div>
+        <div class="flex flex-row gap-2 mx-auto">
             <input class="my-auto" id="show-physical-chars" type="checkbox" bind:checked={$display.showPhysicalCharacteristics} />
             <label class="my-auto select-none" for="show-physical-chars" >Show Physical Characteristics</label>
         </div>
-        
     </div>
     <div class="flex flex-row justify-between justify-items-center flex-wrap w-[75%] gap-4 mx-auto">
         <div class="flex flex-row justify-between justify-items-center flex-wrap gap-4">
