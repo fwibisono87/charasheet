@@ -13,3 +13,5 @@ make your PR
 - `git clone`
 - `npm/pnpm/yarn install`
 - `npm/pnpm/yarn dev`
+
+Before commiting, please run `npm/pnpm/yarn format` to make sure your code matches the code style guide
