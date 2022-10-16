@@ -9,6 +9,6 @@
 		<CharacterData />
 	</div>
 	<div class="flex flex-col bg-secondary p-5 rounded-lg gap-4">
-        <div class="mx-auto"><AbilityScores /></div>
+		<div class="mx-auto"><AbilityScores /></div>
 	</div>
 </div>
