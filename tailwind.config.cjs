@@ -7,7 +7,10 @@ module.exports = {
 				primary: '#26457A',
 				secondary: '#CCCCFF',
 				highlight: '#ff9838'
-			}
+			},
+      screens: {
+        'xs': '280px',
+      }
 		}
 	},
 	plugins: []
