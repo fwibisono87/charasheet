@@ -1,17 +1,14 @@
 <script lang="ts">
-    import { userStore, display } from '../lib/stores';
-    import TextField from './TextField.svelte';
+	import { userStore, display } from '../lib/stores';
+	import TextField from './TextField.svelte';
+	import AbilityScore from './AbilityScore.svelte';
 </script>
 
-<div class="flex flex-col sm:flex-row justify-between gap-4">
-    <div class="flex flex-row justify-between justify-items-center flex-wrap gap-4 mx-auto">
-        <div class="flex flex-row justify-between justify-items-center flex-wrap gap-4">
-            <TextField componentName="Strength" bind:componentValue={$userStore.abilityScores.strength.score} />
-            <TextField componentName="Dexterity" bind:componentValue={$userStore.abilityScores.dexterity.score} />
-            <TextField componentName="Constitution" bind:componentValue={$userStore.abilityScores.constitution.score} />
-            <TextField componentName="Intelligence" bind:componentValue={$userStore.abilityScores.intelligence.score} />
-            <TextField componentName="Wisdom" bind:componentValue={$userStore.abilityScores.wisdom.score} />
-            <TextField componentName="Charisma" bind:componentValue={$userStore.abilityScores.charisma.score} />
-        </div>
-    </div>
+<div class="flex flex-row justify-between justify-items-center flex-wrap gap-6">
+	<AbilityScore componentName="Strength" bind:score={$userStore.abilityScores.strength} />
+	<AbilityScore componentName="Dexterity" bind:score={$userStore.abilityScores.dexterity} />
+	<AbilityScore componentName="Constitution" bind:score={$userStore.abilityScores.constitution} />
+	<AbilityScore componentName="Intelligence" bind:score={$userStore.abilityScores.intelligence} />
+	<AbilityScore componentName="Wisdom" bind:score={$userStore.abilityScores.wisdom} />
+	<AbilityScore componentName="Charisma" bind:score={$userStore.abilityScores.charisma} />
 </div>
